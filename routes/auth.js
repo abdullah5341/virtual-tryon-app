@@ -1,5 +1,5 @@
-import express from 'express';
-import axios from 'axios';
+const express = require('express');
+const axios = require('axios');
 
 const router = express.Router();
 
@@ -28,4 +28,4 @@ router.get('/auth/callback', async (req, res) => {
   res.redirect(`https://${shop}/admin/apps/${process.env.SHOPIFY_API_KEY}`);
 });
 
-export default router;
+module.exports = router;
